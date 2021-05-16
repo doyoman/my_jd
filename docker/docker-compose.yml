@@ -1,0 +1,39 @@
+jd_scripts:
+  image: lxk0301/jd_scripts
+  container_name: jd
+  restart: always
+  volumes:
+    - ./own.sh:/scripts/docker/shell_script_mod.sh
+    - ./my_scripts:/scripts/my_scripts
+    - ./logs:/scripts/logs
+  tty: true
+  net: host
+  extra_hosts:
+    - "gitee.com:180.97.125.228"
+    - "github.com:13.229.188.59"
+    - "raw.githubusercontent.com:185.199.108.133"
+    - "dl-cdn.alpinelinux.org:151.101.130.133"
+    - "api.telegram.org:149.154.167.220"
+  environment:
+    - REPO_URL=git@gitee.com:lxk0301/jd_scripts.git
+    - JD_USER_AGENT=
+    #jd cookies
+    - JD_COOKIE=
+    #Bark App通知
+    - BARK_PUSH=
+    - BARK_SOUND=calypso
+    #telegram机器人通知
+    - TG_BOT_TOKEN=
+    - TG_USER_ID=
+    #兑换多少数量的京豆（20，或者1000京豆,或者其他奖品的文字）
+    - MARKET_COIN_TO_BEANS=1000
+    - JD_JOY_REWARD_NAME=500
+    - ENABLE_AUTO_HELP=true
+    - DREAMFACTORY_FORBID_ACCOUNT=3
+    - DO_NOT_RUN_SCRIPTS=jd_live_redrain.js
+    - CUSTOM_SHELL_FILE=/scripts/docker/shell_script_mod.sh
+    #EU续费账号密码
+    - EU_USERNAME=
+    - EU_PASSWORD=
+    #农场TOKEN
+    - JXNCTOKENS=
