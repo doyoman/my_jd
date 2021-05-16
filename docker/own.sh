@@ -1,10 +1,12 @@
 #!/bin/sh
 
-cd /scripts/my_scripts/longzhuzhu && git pull
+cd /scripts/my_scripts/my_jd && git pull
+
+wait;cd /scripts/my_scripts/longzhuzhu && git pull
 
 wait;cp /scripts/my_scripts/longzhuzhu/qx/*.js /scripts
 
-cd /scripts && cp /scripts/my_scripts/*.* /scripts
+cd /scripts/ && cp /scripts/my_scripts/my_jd/scripts/*.* /scripts
 
 pip3 install BeautifulSoup4
 
