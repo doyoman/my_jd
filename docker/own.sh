@@ -25,4 +25,7 @@ echo "
 
 #EUserv续费
 20 13 8,16 * * /usr/bin/python3 /scripts/main.py >> /scripts/logs/main.log
+
+#京享值PK
+15 8,13,18 17-31 5 * node /scripts/adolf_pk.js >> /scripts/logs/adolf_pk.log
 " >> /scripts/docker/merged_list_file.sh
