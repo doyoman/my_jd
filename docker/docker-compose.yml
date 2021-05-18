@@ -3,8 +3,8 @@ jd_scripts:
   container_name: jd
   restart: always
   volumes:
-    - ./own.sh:/scripts/docker/shell_script_mod.sh
-    - ./my_scripts:/scripts/my_scripts
+    #- ./own.sh:/scripts/docker/shell_script_mod.sh
+    #- ./my_scripts:/scripts/my_scripts
     - ./logs:/scripts/logs
   tty: true
   net: host
@@ -31,7 +31,8 @@ jd_scripts:
     - ENABLE_AUTO_HELP=true
     - DREAMFACTORY_FORBID_ACCOUNT=3
     - DO_NOT_RUN_SCRIPTS=jd_live_redrain.js
-    - CUSTOM_SHELL_FILE=/scripts/docker/shell_script_mod.sh
+    - CUSTOM_SHELL_FILE=https://github.com/doyoman/my_jd/raw/main/docker/shell_script_mod.sh
+    #- CUSTOM_SHELL_FILE=/scripts/docker/shell_script_mod.sh
     #EU续费账号密码
     - EU_USERNAME=
     - EU_PASSWORD=
