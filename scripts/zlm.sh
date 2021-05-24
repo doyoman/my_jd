@@ -22,4 +22,4 @@ elif [ $2 == 3 ];then
   sleep 3s
 fi
 
-curl -s -o /dev/null -d "$ml$zlm2" "https://api.telegram.org/bot$TG_BOT_TOKEN/sendMessage"
+curl -s -o /dev/null -d "chat_id=$TG_USER_ID&text=$ml$zlm2" "https://api.telegram.org/bot$TG_BOT_TOKEN/sendMessage"
