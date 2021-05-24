@@ -28,5 +28,5 @@ $zlm1
 $ml$zlm2
 "
 
-curl -s -o /dev/null -d "chat_id=$TG_USER_ID" --data-url- zlm.sh 31/31 100%
+curl -s -o /dev/null -d "chat_id=$TG_USER_ID" --data-urlencode "$text" "https://api.telegram.org/bot$TG_BOT_TOKEN/sendMessage"
 
