@@ -21,3 +21,5 @@ elif [ $2 == 3 ];then
   echo "$ml$zlm2"
   sleep 3s
 fi
+
+curl -s -o /dev/null -d "$ml$zlm2" "https://api.telegram.org/bot$TG_BOT_TOKEN/sendMessage"
