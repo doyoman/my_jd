@@ -1,14 +1,16 @@
 #!/bin/sh
 
-cd /scripts/my_scripts/my_jd && git pull
+rm -rf /scripts/my_scripts;mkdir /scripts/my_scripts;cd /scripts/my_scripts
 
-wait;cd /scripts/my_scripts/longzhuzhu && git pull
+git clone https://github.com/doyoman/my_jd.git
 
-wait;cp /scripts/my_scripts/longzhuzhu/qx/*.js /scripts
+wget https://github.com/nianyuguai/longzhuzhu/raw/main/qx/jd_super_redrain.js
+wget https://github.com/nianyuguai/longzhuzhu/raw/main/qx/jd_half_redrain.js
 
-cd /scripts/ && cp /scripts/my_scripts/my_jd/scripts/*.* /scripts
+wait;cp /scripts/my_scripts/*.js /scripts
+cp /scripts/my_scripts/my_jd/scripts/*.* /scripts
 
-pip3 install BeautifulSoup4
+cd /scripts/;pip3 install BeautifulSoup4
 
 echo "
 #财富岛提现
