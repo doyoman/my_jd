@@ -33,5 +33,5 @@ echo "
 20 13 8,16 * * /usr/bin/python3 /scripts/main.py >> /scripts/logs/main.log
 
 #京享值PK
-15 0,6,13,19,21 * * * node /scripts/ddo_pk.js >> /scripts/logs/adolf_pk.log
+15 0,6,13,19,21 * * * node /scripts/ddo_pk.js >> /scripts/logs/ddo_pk.log
 " >> /scripts/docker/merged_list_file.sh
