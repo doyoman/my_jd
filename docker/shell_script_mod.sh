@@ -1,18 +1,19 @@
 #!/bin/sh
 
-rm -rf /scripts/my_scripts;mkdir /scripts/my_scripts;cd /scripts/my_scripts
+rm -rf /scripts/my_scripts;mkdir /scripts/my_scripts;cd /scripts/my_scripts;mkdir /scripts/my_scripts/own
 
 git clone https://github.com/doyoman/my_jd.git
 git clone https://github.com/longzhuzhu/nianyu.git
 wait
 cp /scripts/my_scripts/my_jd/scripts/*.* /scripts
 cp /scripts/my_scripts/nianyu/qx/*.* /scripts
-cp /scripts/my_scripts/my_jd/scripts/*.* /scripts/my_scripts
-cp /scripts/my_scripts/nianyu/qx/*.* /scripts/my_scripts
+cp /scripts/my_scripts/my_jd/scripts/*.* /scripts/my_scripts/own
+cp /scripts/my_scripts/nianyu/qx/*.* /scripts/my_scripts/own
 cd /scripts/;pip3 install BeautifulSoup4
 
-for jsname in $(find /scripts/my_scripts -name "*.js"); do
+for jsname in $(find /scripts/my_scripts/own/ -name "*.js"); do
         jsnamecron="$(cat $jsname | grep -oE "/?/?cron \".*\"" | cut -d\" -f2)"
+	jsname="$(echo $jsname | cat -d/ -f2)"
         test -z "$jsnamecron" || echo "$jsnamecron node /scripts/${jsname} >> /scripts/logs/${jsname}.log 2>&1" >> /scripts/docker/merged_list_file.sh
 done
 
