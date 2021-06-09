@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+cd /root/scripts_backup/my_jd ; git pull
 cd /root/scripts_backup/nianyu ; git pull
 cd /root/scripts_backup/jd_scripts ; git pull
 cd /root
