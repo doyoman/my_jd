@@ -13,8 +13,8 @@ cd /scripts/;pip3 install BeautifulSoup4
 
 for jsname in $(find /scripts/my_scripts/own/ -name "*.js"); do
         jsnamecron="$(cat $jsname | grep -oE "/?/?cron \".*\"" | cut -d\" -f2)"
-	jsnames="$(echo $jsname | cat -d/ -f2)"
-        test -z "$jsnamecron" || echo "$jsnamecron node /scripts/${jsnames} >> /scripts/logs/${jsnames}.log 2>&1" >> /scripts/docker/merged_list_file.sh
+	jsname="$(echo $jsname | cut -d/ -f2)"
+        test -z "$jsnamecron" || echo "$jsnamecron node /scripts/${jsname} >> /scripts/logs/${jsname}.log 2>&1" >> /scripts/docker/merged_list_file.sh
 done
 
 echo "
