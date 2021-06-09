@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "--------------{date -a}------------------"
+echo "--------------`date`------------------"
 cd /root/scripts_backup/my_jd ; git pull
 cd /root/scripts_backup/nianyu ; git pull
 cd /root/scripts_backup/jd_scripts ; git pull
