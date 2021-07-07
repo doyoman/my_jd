@@ -3,13 +3,9 @@
 rm -rf /scripts/my_scripts;mkdir /scripts/my_scripts;cd /scripts/my_scripts;mkdir /scripts/my_scripts/own
 
 git clone https://github.com/doyoman/my_jd.git
-git clone https://github.com/longzhuzhu/nianyu.git
 wait
 cp /scripts/my_scripts/my_jd/scripts/*.* /scripts
-cp /scripts/my_scripts/nianyu/qx/*.* /scripts
 cp /scripts/my_scripts/my_jd/scripts/*.* /scripts/my_scripts/own
-cp /scripts/my_scripts/nianyu/qx/*.* /scripts/my_scripts/own
-#rm /scripts/my_scripts/own/long_super_redrain.js
 cd /scripts/;pip3 install BeautifulSoup4
 
 for jsname in $(find /scripts/my_scripts/own/ -name "*.js"); do
