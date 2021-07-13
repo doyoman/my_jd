@@ -2,11 +2,11 @@
 
 rm -rf /scripts/my_scripts;mkdir /scripts/my_scripts;cd /scripts/my_scripts;mkdir /scripts/my_scripts/own
 
-git clone https://github.com/doyoman/my_jd.git
+#git clone https://github.com/doyoman/my_jd.git
 git clone https://github.com/smiek2221/scripts.git
 wait
-cp /scripts/my_scripts/my_jd/scripts/*.* /scripts
-cp /scripts/my_scripts/my_jd/scripts/*.* /scripts/my_scripts/own
+#cp /scripts/my_scripts/my_jd/scripts/*.* /scripts
+#cp /scripts/my_scripts/my_jd/scripts/*.* /scripts/my_scripts/own
 cp /scripts/my_scripts/scripts/*.* /scripts
 cp /scripts/my_scripts/scripts/*.* /scripts/my_scripts/own
 
